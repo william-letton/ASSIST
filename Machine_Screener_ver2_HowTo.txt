@@ -1,0 +1,23 @@
+How-To file for program:
+Machine_Screener_ver2
+
+Setup with Python
+
+The program runs a Python script which requires that Python3 is installed on your machine. This can be downloaded for free from [https://www.python.org/downloads/].
+
+Input data
+
+The program needs as an input a .csv file that contains a column of abstract IDs, a column of abstract texts, and a column of human tags. There can be other columns present in the file, these will be ignored. The top row of the file should contain headings not data, as this row is discarded during processing.
+To save an Excel file as csv, navigate to the sheet of interest using the tabs along the bottom. Click File, Save As, then from the drop-down menu select "CSV (Comma delimited)(*.csv)". Give the file a name (e.g. YourFile.csv) and click Save.
+YourFile.csv must be saved or moved into the same folder as the "Machine_Screener_ver2" file. Please copy the Machine_Screener_ver2 file into your own folder, and delete it after use.
+
+Running the program
+
+Right click on Machine_Screener_ver2, select Open With and then Python. The black command line box should appear and prompt you to enter the name of your csv file, followed by the columns in which the ID numbers, abstract text, and screening tags can be found.
+The program will then perform a quick check for duplicate abstracts and will display any duplicate pairs that it finds. This will not include abstract entries that are empty. You can then select whether to continue with the program.
+The program will then check within the duplicates it has found for any duplicates that have different human tags. It will display any pairs that it finds. Again you can then select whether to continue the program.
+
+
+
+If there are no duplicates then the program should run all the way through in 60-90 seconds. It will create an output csv file in the same folder called YourFile.csv_suggestedTags.csv.
+This file will contain three columns: the ID list, the input human screening tags, and the machine-suggested screening tags. The output will be in the same order as the input, and so the machine tags can be copied straight into your original Excel file for comparison (making sure to account for any missing ID numbers if you had to delete duplicates).
